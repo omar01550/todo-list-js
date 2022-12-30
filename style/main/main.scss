@@ -1,0 +1,199 @@
+@import '../helpers/root';
+@import '../helpers/reset';
+
+
+
+.container{
+   width:60%;
+   margin: 0 auto;
+   @media(max-width: 767px){
+     width:90%;
+   }
+
+}
+
+.page{
+   width: 100%;
+   height: 100%;
+}
+//up section
+.up{
+   width: 100%;
+   height: 30%;
+   padding-top:60px;
+   background-image: url("../../images/bg-desktop-dark.jpg");
+}
+
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    & .logo{
+       color: white;
+       font-weight: bold;
+       font-size:2rem;
+
+    }
+    i{
+       color: white;
+       font-size:2rem;
+       font-weight: bold;
+    }
+}
+
+
+
+//down section
+//container
+// to do
+//tasks
+//task
+
+
+.down{
+  width: 100%;
+  min-height: 70%;
+  background-color: var(--seconary-color);
+  position: relative;
+
+    .container{
+
+
+    }
+
+    .todo{
+      width: 100%;
+      transform: translateY(-70px);
+
+       form{
+          width: 100%;
+
+
+           input{
+              width: 100%;
+              font-size:2rem;
+              padding:10px;
+              background-color: var(--task-color);
+              border-radius: 5px;
+              border:none;
+              outline: none;
+              color: var(--text-color);
+
+              @media(max-width:767px){
+                 font-size:1rem;
+              }
+
+           }
+       }
+
+       .tasks{
+         width: 100%;
+         min-height: 0px;
+         margin-top:30px;
+         color: red;
+
+
+           .task{
+              width:100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color:var(--text-color);
+              background-color: var(--task-color);
+              padding: 20px;
+              border-bottom: 1px solid #f0f0f0;
+              position: relative;
+
+              .content{
+                   display: flex;
+                   justify-content: flex-start;
+                   align-items: center;
+                 .check{
+
+                    width:25px;
+                    height: 25px;
+                    border:2px solid white;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+
+
+
+                      .check-icon{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-image: linear-gradient(60deg,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+                        left:-112%;
+                        top:-110%;
+                      }
+
+
+                 }
+
+                 p{
+                    margin-left: 20px;
+                    width:80%;
+                    white-space:nowrap;
+                    font-size:1.7rem;
+
+                 }
+              }
+              .icons{
+                 width:40px;
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+
+                   & i:hover{
+                     color:#7f36ea;
+
+                   }
+              }
+
+              i{
+                cursor: pointer;
+              }
+              .fa-pen{
+                 margin-right: 20px;
+              }
+
+              .links{
+                position: absolute;
+                 left: 0;
+                  bottom:-40px;
+                 width:100%;
+                 padding:10px;
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 background-color: var(--task-color);
+                  & span{
+                    display: block;
+                  }
+                 & > *{
+                   cursor: pointer;
+                 }
+
+                  & div{
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     width:190px;
+
+                     .active{
+                       color: var(--active-color);
+                     }
+                         a{
+                            color:var(--text-color);
+
+                         }
+                  }
+              }
+           }
+       }
+    }
+}
