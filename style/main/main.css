@@ -201,7 +201,7 @@ header {
               color: var(--text-color); }
 
               .down .todo .completed-section{
-                 color: white;
+                 color:var(--text-color);
                  width: 100%;
                  min-height: 20vh;
                  background-color: var(--task-color); }
